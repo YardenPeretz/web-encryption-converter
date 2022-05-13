@@ -5,12 +5,12 @@ $(document).ready(function(){
     const text_result = $("#text_result"); // result after decoding
 
     // GET VALUE OF SELECTED FORMAT FROM INPUT.
-    selected_format.addEventListener("change",() => {
+    $(selected_format).on("change",() => {
         const format = $(selected_format).val();
 
         console.log("text_to_Decode : " + $(text_to_decode).val())
         // WRITE DECODING CODE HERE
-        switch(selected_format.value){
+        switch(format){
             case "base64":
                  console.log("base64");
                  break;
@@ -18,7 +18,7 @@ $(document).ready(function(){
                  console.log("sha");
                  break;
             default:
-                console.log(selected_format.value)
+                console.log(format)
         }
 
     });
