@@ -11,7 +11,6 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </head>
-
 <body>
     <div class="container-fluid" style="height:100vh;">
         <div class="row d-flex justify-cotent-center align-items-center mt-5">
@@ -22,11 +21,11 @@
                 </div>
             </div>
             <div class="menu col-4 d-flex">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" id="selected_format" aria-label="Default select example">
                     <option selected>Select Format to decode</option>
                     <option value="base64">base64</option>
-                    <option value="2">hamutz</option>
-                    <option value="3">hasmutz</option>
+                    <option value="sha256">sha256</option>
+                    <option value="something">something</option>
                 </select>
                 <button class="btn btn-dark">Decode now!</button>
             </div>
@@ -39,3 +38,4 @@
         </div>
     </div>
 </body>
+<script src="script.js"></script>
