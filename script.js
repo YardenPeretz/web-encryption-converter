@@ -1,12 +1,14 @@
+$(document).ready(function(){
+    // GLOBAL VARS DECLARATION
+    const selected_format = $("#selected_format"); // selected ecryption format selected by user
+    const text_to_decode = $("#text_to_decode"); // text before decoding
+    const text_result = $("#text_result"); // result after decoding
 
-// GLOBAL VARS DECLARATION
-const selected_format = document.getElementById("selected_format");
-
-window.addEventListener("load",() => {
     // GET VALUE OF SELECTED FORMAT FROM INPUT.
     selected_format.addEventListener("change",() => {
-       // console.log(selected_format.value);
-        const format = selected_format.value;
+        const format = $(selected_format).val();
+
+        console.log("text_to_Decode : " + $(text_to_decode).val())
         // WRITE DECODING CODE HERE
         switch(selected_format.value){
             case "base64":
@@ -20,6 +22,5 @@ window.addEventListener("load",() => {
         }
 
     });
-}); // END LOAD EVENT
-
+}); // END ready event
 
